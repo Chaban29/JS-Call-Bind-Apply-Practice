@@ -1,4 +1,4 @@
-"use strict";
+// "use strict";
 
 // window.alert('Hello Script!');
 // window.alert = 5;
@@ -427,4 +427,371 @@
 // goToDoubleNumbers(6);
 // console.log(this);
 
+// function slow(x) {
+//   alert(`Викликана з ${x}`);
+//   return x;
+// }
+
+// function cachingDecorator(func) {
+//   let cache = new Map();
+
+//   return function (x) {
+//     if (cache.has(x)) {
+//       return cache.get(x);
+//     }
+//     let result = func(x);
+//     cache.set(x, result);
+//   };
+// }
+
+// slow = cachingDecorator(slow);
+// alert("Again: " + slow(1));
+
+// function slow(x) {
+//   alert(`Викликана з ${x}`);
+//   return x;
+// }
+
+// function cachingDecorator(func) {
+//   let cache = new Map();
+
+//   console.log(cache);
+
+//   return function (x) {
+//     if (caches.has(x)) {
+//       cache.get(x);
+//     }
+//     let result = func(x);
+//     console.log(result);
+//     cache.set(result, x);
+//     return result;
+//   };
+// }
+
+// slow = cachingDecorator(slow);
+
+// alert(slow(1));
+// // alert(`Again: ${slow(1)}`);
+
+// function getXItem(item) {
+//   alert(`Викликана з ${item}`);
+//   return item;
+// }
+// function cachingDecorator(func) {
+//   let cache = new Map();
+
+//   return function (item) {
+//     if (cache.has(item)) {
+//       return cache.get(item);
+//     }
+//     let resultItem = func(item);
+//     cache.set(resultItem, item);
+//     return resultItem;
+//   };
+// }
+
+// getXItem = cachingDecorator(getXItem);
+
+// alert(getXItem(1));
+
+// function hello(text) {
+//   console.log(text, this.name, this.age);
+// }
+
+// const person = {
+//   name: "Roman",
+//   age: 22,
+// };
+
+// hello.apply(person, ['Hello']);
+
+// function hello() {
+//   console.log(`${this.name} ${this["last name"]}`);
+// }
+
+// const user = {
+//   ["name"]: "Roman",
+//   ["last name"]: "Chaban",
+//   sayHello() {
+//     hello;
+//   },
+// };
+
+// hello.call(user);
+
+// function sayHi() {
+//   console.log(this.name);
+// }
+
+// let user = { name: "Roman" };
+// let admin = { name: "Pete" };
+
+// // sayHi.call(user);
+// // sayHi.call(admin);
+
+// function say(phrase) {
+//   console.log(` ${phrase} ${this.name}`);
+// }
+
+// say.call(user, "Hello");
+// say.call(admin, "Hi");
+
+// function hash () {
+//   console.log([].join.call(arguments));
+// }
+// hash(1,2);
+
+// const auto = {
+//   brand: "BMW",
+//   drive() {
+//     console.log(this);
+//     return `Let's go drive ${this.brand}`;
+//   },
+// };
+
+// const motorBike = {
+//   brand: "Suzuki",
+// };
+
+// let autoDrive = auto.drive.bind(auto);
+// let motorDrive = auto.drive.bind(motorBike);
+// let sheepDrive = auto.drive.bind({ brand: "Sheep" });
+
+// const h2 = document.querySelector.bind(document);
+// // console.log(h2);
+
+// const header = h2('body');
+
+// console.log(header);
+
+// console.log(h2 === document.querySelector);
+
+// const auto = {
+//   brand: "BMW",
+//   drive() {
+//     console.log(this);
+//     return `Заведем наш ${this.brand}`;
+//   },
+// };
+
+// const motorBike = {
+//   brand: 'Suzuki',
+// }
+
+// const autoDrive = auto.drive.bind(auto);
+// const motorDrive = auto.drive.bind(motorBike);
+
+// function sayHi(msg) {
+//   console.log(this);
+//   console.log(msg + " " + this.name);
+// }
+
+// const person = {
+//   name: "Roman",
+//   ["last name"]: "Chaban",
+// };
+
+// const sayHello = sayHi.bind(person, "HI!");
+// sayHello();
+// sayHi.apply(person, ["Hello"]);
+
+// let printValue = (item) => {
+//   return item * 2;
+// };
+
+// const cachingDecorator = (func) => {
+//   let cache = new Map();
+
+//   return function (item) {
+//     if (cache.has(item)) {
+//       cache.get(item);
+//     }
+//     let result = func(item);
+//     cache.set(item, result);
+//     return result;
+//   };
+// };
+
+// printValue = cachingDecorator(printValue);
+
+// alert(printValue(1));
+
+// function printName() {
+//   console.log(this);
+//   console.log(this.firstName);
+// }
+
+// const user = {
+//   firstName: "Roman",
+//   ["last name"]: "Chaban",
+// };
+
+// printName.call(user);
+
+// let slow = (x) => {
+//   alert(`Викликана з ${x}`);
+//   return x;
+// };
+
+// let slowTwo = (x) => {
+//     return x * 2;
+// }
+
+// const cachingDecorator = (func) => {
+//   let cache = new Map();
+//   return function (x) {
+//     if (cache.has(x)) {
+//       return cache.get(x);
+//     }
+//     let result = func(x);
+
+//     cache.set(x, result);
+//     return result;
+//   };
+// };
+
+// slow = cachingDecorator(slow);
+
+// alert(slow(1));
+// alert(`Again: ${slow(1)}`);
+
+// slowTwo = cachingDecorator(slowTwo);
+
+// console.log(slowTwo(2));
+
+// let worker = {
+//   someMethod() {
+//     return 1;
+//   },
+//   slow(x) {
+//     alert("Called with " + x);
+//     return x * this.someMethod();
+//   },
+// };
+
+// const cachingDecorator = (func) => {
+//   let cache = new Map();
+//   return function (x) {
+//     if (cache.has(x)) {
+//       return cache.get(x);
+//     }
+//     let result = func(x);
+//     cache.set(x, result);
+//     return result;
+//   };
+// };
+
+// // alert(worker.slow(1));
+
+// // worker.slow = cachingDecorator(worker.slow);
+// alert(worker.slow(2));
+
+// function sayHi(greet) {
+//   console.log(greet + " " + this.name);
+// }
+
+// let user = { name: "Ivan" };
+// let admin = { name: "Admin" };
+
+// sayHi.call(user, "Hello");
+// sayHi.call(admin, "Good day");
+
+// let worker = {
+//   someMethod() {
+//     return 1;
+//   },
+
+//   slow(x) {
+//     alert("Called with " + x);
+//     return x * this.someMethod();
+//   },
+// };
+
+// function cachingDecorator(func) {
+//   let cache = new Map();
+//   return function (x) {
+//     if (cache.has(x)) {
+//       return cache.get(x);
+//     }
+//     let result = func.call(this, x);
+//     cache.set(x, result);
+//     return result;
+//   };
+// }
+
+// worker.slow = cachingDecorator(worker.slow);
+
+// alert(worker.slow(2));
+// alert(worker.slow(2));
+
+// let worker = {
+//   slow(min, max) {
+//     alert(`Called with ${min},${max}`);
+//     return min + max;
+//   },
+// };
+
+// function cachingDecorator(func, hash) {
+//   let cache = new Map();
+//   return function () {
+//     let key = hash(arguments);
+//     if (cache.has(key)) {
+//       return cache.get(key);
+//     }
+//     let result = func.apply(this, ...[arguments]); //**
+//     cache.set(key, result);
+//     return result;
+//   };
+// }
+
+// function hash(args) {
+//   return args[0] + "," + args[1];
+// }
+
+// worker.slow = cachingDecorator(worker.slow, hash);
+
+// alert(worker.slow(3, 5));
+
+// let wrapper = function () {
+//   return func.apply(this, arguments);
+// };
+
+// function hash () {
+//   alert([].join.call(arguments));
+// }
+// hash(1,2);
+
+// let user = {
+//   firstName: "Roman",
+// };
+
+// function func(phrase) {
+//   alert(`${phrase},  ${this.firstName}!`);
+// }
+
+// let newFunc = func.bind(user);
+
+// newFunc('Hello');
+
+// let user = {
+//   name: "Roman",
+//   sayHelloName(phrase) {
+//     alert(`${phrase}, ${this.name}`);
+//   },
+// };
+
+// let say = user.sayHelloName.bind(user);
+
+// say('Hello');
+// say('Goodbye');
+
+// function mul(a, b) {
+//   return console.log(a * b);
+// }
+
+// let dobule = mul.bind(null, 2);
+
+// dobule(3);
+// dobule(4);
+// dobule(6);
 
