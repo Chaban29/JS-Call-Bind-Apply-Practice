@@ -1,146 +1,146 @@
-// "use strict";
+"use strict";
 
-// window.alert('Hello Script!');
-// window.alert = 5;
-// console.log(window);
+window.alert('Hello Script!');
+window.alert = 5;
+console.log(window);
 
-// let gLet = 5;
-// alert(window.gLet);
+let gLet = 5;
+alert(window.gLet);
 
-// window.isUser = {
-//   name: "Roman",
-//   lastName: "Chaban",
-// };
+window.isUser = {
+  name: "Roman",
+  lastName: "Chaban",
+};
 
-// alert(isUser['lastName']);
+alert(isUser['lastName']);
 
-// window.Promise = null;
+window.Promise = null;
 
-// if (!window.Promise) {
-//   alert("Твій браузер застрів!");
-// } else {
-//   alert("Твій браузер використовує Promise!");
-// }
+if (!window.Promise) {
+  alert("Твій браузер застрів!");
+} else {
+  alert("Твій браузер використовує Promise!");
+}
 
-// function sayHi () {
-//   alert('Hello');
-// }
+function sayHi () {
+  alert('Hello');
+}
 
-// console.log(sayHi.name);
+console.log(sayHi.name);
 
-// let sayHi = function () {
-//   alert("Hello");
-// };
+let sayHi = function () {
+  alert("Hello");
+};
 
-// alert(sayHi.name);
+alert(sayHi.name);
 
-// function f(sayHi = function () {}) {
-//   alert(sayHi.name);
-// }
+function f(sayHi = function () {}) {
+  alert(sayHi.name);
+}
 
-// f();
+f();
 
-// function getFuncLength (a, b, c) {
-//   console.log(`Function length is: ${getFuncLength.length}`);
-// }
+function getFuncLength (a, b, c) {
+  console.log(`Function length is: ${getFuncLength.length}`);
+}
 
-// getFuncLength();
+getFuncLength();
 
-// function sayCounter(counter) {
-//   sayCounter.counter++;
-// }
+function sayCounter(counter) {
+  sayCounter.counter++;
+}
 
-// sayCounter.counter = 0;
+sayCounter.counter = 0;
 
-// sayCounter();
-// sayCounter();
-// sayCounter();
-// sayCounter();
-// sayCounter();
-// sayCounter();
+sayCounter();
+sayCounter();
+sayCounter();
+sayCounter();
+sayCounter();
+sayCounter();
 
-// alert(`Фукнція sayCounter була викликана ${sayCounter.counter} разів`);
+alert(`Фукнція sayCounter була викликана ${sayCounter.counter} разів`);
 
-// function makeCounter() {
-//   function counter() {
-//     return counter.count++;
-//   }
-//   counter.count = 1;
-//   return counter;
-// }
+function makeCounter() {
+  function counter() {
+    return counter.count++;
+  }
+  counter.count = 1;
+  return counter;
+}
 
-// let counter = makeCounter(10);
+let counter = makeCounter(10);
 
-// alert(counter());
-// alert(counter());
-// alert(counter());
-// alert(counter());
+alert(counter());
+alert(counter());
+alert(counter());
+alert(counter());
 
-// let sayHi = function say(who) {
-//   alert(`Hello ${who}`);
-//   return say('Ivan');
-// };
+let sayHi = function say(who) {
+  alert(`Hello ${who}`);
+  return say('Ivan');
+};
 
-// sayHi('Roman');
+sayHi('Roman');
 
-// let sayHi = function say(who) {
-//   if (who) {
-//     alert(`Hello ${who}`);
-//   } else {
-//     say("Guest");
-//   }
-// };
+let sayHi = function say(who) {
+  if (who) {
+    alert(`Hello ${who}`);
+  } else {
+    say("Guest");
+  }
+};
 
-// let welcome = sayHi;
+let welcome = sayHi;
 
-// sayHi = null;
+sayHi = null;
 
-// welcome("Roman Chaban");
+welcome("Roman Chaban");
 
-// function sum(a) {
-//   let currentSum = a;
+function sum(a) {
+  let currentSum = a;
 
-//   function f(b) {
-//     currentSum += b;
-//     return f;
-//   }
+  function f(b) {
+    currentSum += b;
+    return f;
+  }
 
-//   f.toString = function () {
-//     return currentSum;
-//   };
-//   return f;
-// }
+  f.toString = function () {
+    return currentSum;
+  };
+  return f;
+}
 
-// alert(sum(10)(20));
+alert(sum(10)(20));
 
-// let func = new Function('a', 'b' , 'return a + b');
-// console.log(func(10, 20));
+let func = new Function('a', 'b' , 'return a + b');
+console.log(func(10, 20));
 
-// let sayGreeting = new Function(
-//   "greet",
-//   "name",
-//   `return console.log(greet + ' ' + name)`
-// );
+let sayGreeting = new Function(
+  "greet",
+  "name",
+  `return console.log(greet + ' ' + name)`
+);
 
-// sayGreeting("Hello", "Roman");
+sayGreeting("Hello", "Roman");
 
-// let double = new Function ('a', 'b' , 'return a + b');
+let double = new Function ('a', 'b' , 'return a + b');
 
-// console.log(double(10, 5));
+console.log(double(10, 5));
 
-// let timeId = setTimeout(() => {
-//   console.log('Hello log!');
-// }, 2000);
+let timeId = setTimeout(() => {
+  console.log('Hello log!');
+}, 2000);
 
-// const sayHi = (name) => {
-//   console.log(`Hello ${name}!`);
-// }
+const sayHi = (name) => {
+  console.log(`Hello ${name}!`);
+}
 
-// setTimeout(sayHi, 2000, 'Roman');
+setTimeout(sayHi, 2000, 'Roman');
 
-// setTimeout('alert(\'Hello\')', 2000);
+setTimeout('alert(\'Hello\')', 2000);
 
-// setTimeout(() => console.log('Roman Chaban'), 3000);
+setTimeout(() => console.log('Roman Chaban'), 3000);
 
 // let timerId = setTimeout(() => alert('Hello world!'), 1000);
 // alert(timerId);
@@ -157,14 +157,14 @@
 //   timerId = setTimeout(tick, 2000);
 // });
 
-// setTimeout(() => alert('Hello'), 0);
+setTimeout(() => alert('Hello'), 0);
 
-// alert('world!');
+alert('world!');
 
-// const printNumbers = (from, to) => {
-//   setInterval(printNumbers, 100, from, to);
-// };
-// alert(printNumbers(1, 10));
+const printNumbers = (from, to) => {
+  setInterval(printNumbers, 100, from, to);
+};
+alert(printNumbers(1, 10));
 
 // let timerId = setTimeout(() => console.log('Hello User'), 1500);
 
@@ -200,128 +200,128 @@
 //   timerId = setTimeout(tick, 2000);
 // },2000);
 
-// let setTimer = setTimeout(function tick() {
-//   alert("Tick tack");
-//   setTimer = setTimeout(tick, 1000);
-// }, 1000);
+let setTimer = setTimeout(function tick() {
+  alert("Tick tack");
+  setTimer = setTimeout(tick, 1000);
+}, 1000);
 
-// alert("Roman");
+alert("Roman");
 
-// setTimeout(() => alert("Hello"));
+setTimeout(() => alert("Hello"));
 
-// let start = Date.now();
-// let times = [];
+let start = Date.now();
+let times = [];
 
-// setTimeout(function run() {
-//   times.push(Date.now() - start);
-//   if (start + 100 < Date.now()) alert(times);
-//   else setTimeout(run);
-// });
+setTimeout(function run() {
+  times.push(Date.now() - start);
+  if (start + 100 < Date.now()) alert(times);
+  else setTimeout(run);
+});
 
-// const printNumbers = (from, to) => {
-//   let current = from;
+const printNumbers = (from, to) => {
+  let current = from;
 
-//   let timerId = setInterval(function () {
-//     alert(current);
-//     if (current == to) {
-//       clearInterval(timerId);
-//     }
-//     current++;
-//   }, 1000);
-// };
+  let timerId = setInterval(function () {
+    alert(current);
+    if (current == to) {
+      clearInterval(timerId);
+    }
+    current++;
+  }, 1000);
+};
 
-// alert(printNumbers(1, 10));
+alert(printNumbers(1, 10));
 
-// function printNumbers(from, to) {
-//   let current = from;
+function printNumbers(from, to) {
+  let current = from;
 
-//   setTimeout(function go() {
-//     alert(current);
-//     if (current < to) {
-//       setTimeout(go, 1000);
-//     }
-//     current++;
-//   }, 1000);
-// }
+  setTimeout(function go() {
+    alert(current);
+    if (current < to) {
+      setTimeout(go, 1000);
+    }
+    current++;
+  }, 1000);
+}
 
-// printNumbers(1, 5);
+printNumbers(1, 5);
 
-// setTimeout(() => {
-//     printHello('Hello');
-// }, 0);
+setTimeout(() => {
+    printHello('Hello');
+}, 0);
 
-// console.log('JS');
+console.log('JS');
 
 // let timerId = setInterval(printHello, 500, "Hello");
 // clearTimeout(timerId);
 
-// const printHello = (text) => {
-//   console.log(text);
-// };
+const printHello = (text) => {
+  console.log(text);
+};
 
-// const customSetInterval = (func, interval, ...params) => {
-//   setTimeout(() => {
-//     func(...params);
-//     customSetInterval(func, interval, ...params);
-//   }, interval);
-// };
+const customSetInterval = (func, interval, ...params) => {
+  setTimeout(() => {
+    func(...params);
+    customSetInterval(func, interval, ...params);
+  }, interval);
+};
 
-// customSetInterval(printHello, 500, "Hello");
+customSetInterval(printHello, 500, "Hello");
 
-// showMessage();
+showMessage();
 
-// function showMessage() {
-//   console.log("Hello world!");
-// }
+function showMessage() {
+  console.log("Hello world!");
+}
 
-// showMessage();
+showMessage();
 
-// function getSum() {
-//   let numOne, numTwo;
-//   function getNumOne() {
-//     numOne = 2;
-//   }
+function getSum() {
+  let numOne, numTwo;
+  function getNumOne() {
+    numOne = 2;
+  }
 
-//   function getNumTwo() {
-//     numTwo = 8;
-//   }
-//   getNumOne();
-//   getNumTwo();
-//   let numSum = numOne + numTwo;
-//   console.log(numSum);
-// }
-// getSum();
+  function getNumTwo() {
+    numTwo = 8;
+  }
+  getNumOne();
+  getNumTwo();
+  let numSum = numOne + numTwo;
+  console.log(numSum);
+}
+getSum();
 
-// if ( 2 > 1) {
-//   function getSum () {
-//     let numOne, numTwo;
+if ( 2 > 1) {
+  function getSum () {
+    let numOne, numTwo;
 
-//     function getNumOne () {
-//       numOne = 2;
-//     }
-//     function getNumTwo () {
-//       numTwo = 8;
-//     }
-//     getNumOne();
-//     getNumTwo();
-//     let numSum = numOne + numTwo;
-//     console.log(numSum);
-//   }
-// }
-// getSum();
+    function getNumOne () {
+      numOne = 2;
+    }
+    function getNumTwo () {
+      numTwo = 8;
+    }
+    getNumOne();
+    getNumTwo();
+    let numSum = numOne + numTwo;
+    console.log(numSum);
+  }
+}
+getSum();
 
-// function sayHi() {
-//   console.log("Hello");
-// }
-// setTimeout(sayHi, 1000);
+function sayHi() {
+  console.log("Hello");
+}
+setTimeout(sayHi, 1000);
 
-// function greeting(greet, name) {
-//   console.log(`${greet}, ${name}`);
-// }
+function greeting(greet, name) {
+  console.log(`${greet}, ${name}`);
+}
 
-// setTimeout(greeting, 2000, "Hello", "Roman");
+setTimeout(greeting, 2000, "Hello", "Roman");
 
-// setTimeout(() => alert('Hello'), 2000);
+setTimeout(() => alert('Hello'), 2000);
 
 // let timerId = setTimeout(() => console.log("Hello world!"), 3000);
 // alert(timerId);
@@ -336,41 +336,41 @@
 //   timerId = setTimeout(tick, 2000);
 // }, 2000);
 
-// setTimeout(() => alert('world!'), 0);
-// alert('Hello');
+setTimeout(() => alert('world!'), 0);
+alert('Hello');
 
-// function printNumbers(from, to) {
-//   let current = from;
+function printNumbers(from, to) {
+  let current = from;
 
-//   let timerId = setInterval(function () {
-//     alert(current);
-//     if (current === to) {
-//       clearInterval(timerId);
-//     }
-//     current++;
-//   }, 1000);
-// }
+  let timerId = setInterval(function () {
+    alert(current);
+    if (current === to) {
+      clearInterval(timerId);
+    }
+    current++;
+  }, 1000);
+}
 
-// printNumbers(5,10);
+printNumbers(5,10);
 
-// const printFirstAndLastNames = (firstName, lastName) => {
-//   return console.log(`${firstName} ${lastName}`);
-// };
-// setInterval(printFirstAndLastNames, 500, "Roman", "Chaban");
+const printFirstAndLastNames = (firstName, lastName) => {
+  return console.log(`${firstName} ${lastName}`);
+};
+setInterval(printFirstAndLastNames, 500, "Roman", "Chaban");
 
-// let timerId = setTimeout(() => alert('Hello world!'), 2500);
+let timerId = setTimeout(() => alert('Hello world!'), 2500);
 
-// function sayHi () {
-//   console.log('Hello world!');
-// }
-// setTimeout(sayHi, 1500);
+function sayHi () {
+  console.log('Hello world!');
+}
+setTimeout(sayHi, 1500);
 
-// function sayHi(msg, name) {
-// console.log(`${msg} ${name}`);
-// }
-// setTimeout(sayHi, 2000, 'Hello', 'Ivan');
-// setTimeout("alert('Hello')", 3000);
-// setTimeout(() => alert('Hello world!'), 2000);
+function sayHi(msg, name) {
+console.log(`${msg} ${name}`);
+}
+setTimeout(sayHi, 2000, 'Hello', 'Ivan');
+setTimeout("alert('Hello')", 3000);
+setTimeout(() => alert('Hello world!'), 2000);
 
 // let timerId = setTimeout(function tick () {
 //   alert('Nothing')
@@ -385,28 +385,28 @@
 //   timerId = setTimeout(tick, 500);
 // }, 500);
 
-// setTimeout(() => alert('world!'));
-// alert('Hello');
+setTimeout(() => alert('world!'));
+alert('Hello');
 
-// const printNumbers = (from, to) => {
-//   let current = from;
+const printNumbers = (from, to) => {
+  let current = from;
 
-//   let timerId = setInterval(function () {
-//     alert(current);
-//     if (current == to) {
-//       clearInterval(timerId);
-//     }
-//     current++;
-//   }, 1000);
-// };
+  let timerId = setInterval(function () {
+    alert(current);
+    if (current == to) {
+      clearInterval(timerId);
+    }
+    current++;
+  }, 1000);
+};
 
-// printNumbers(5, 10);
+printNumbers(5, 10);
 
-// const printName = function (text) {
-//   // console.log(this);
-//   console.log(`${text} ${this.name} ${this.lastName}`);
-//   console.log(`User age is: ${this.age}`);
-// };
+const printName = function (text) {
+  // console.log(this);
+  console.log(`${text} ${this.name} ${this.lastName}`);
+  console.log(`User age is: ${this.age}`);
+};
 
 // const user = {
 //   name: "Roman",
@@ -414,100 +414,100 @@
 //   age: 22,
 // };
 
-// printName.apply(user, ["Hello"]);
+printName.apply(user, ["Hello"]);
 
-// function dobule(a, b) {
-//   console.log(a * b);
-// }
+function dobule(a, b) {
+  console.log(a * b);
+}
 
-// let goToDoubleNumbers = dobule.bind(null, 2);
+let goToDoubleNumbers = dobule.bind(null, 2);
 
-// goToDoubleNumbers(4);
-// goToDoubleNumbers(5);
-// goToDoubleNumbers(6);
-// console.log(this);
+goToDoubleNumbers(4);
+goToDoubleNumbers(5);
+goToDoubleNumbers(6);
+console.log(this);
 
-// function slow(x) {
-//   alert(`Викликана з ${x}`);
-//   return x;
-// }
+function slow(x) {
+  alert(`Викликана з ${x}`);
+  return x;
+}
 
-// function cachingDecorator(func) {
-//   let cache = new Map();
+function cachingDecorator(func) {
+  let cache = new Map();
 
-//   return function (x) {
-//     if (cache.has(x)) {
-//       return cache.get(x);
-//     }
-//     let result = func(x);
-//     cache.set(x, result);
-//   };
-// }
+  return function (x) {
+    if (cache.has(x)) {
+      return cache.get(x);
+    }
+    let result = func(x);
+    cache.set(x, result);
+  };
+}
 
-// slow = cachingDecorator(slow);
-// alert("Again: " + slow(1));
+slow = cachingDecorator(slow);
+alert("Again: " + slow(1));
 
-// function slow(x) {
-//   alert(`Викликана з ${x}`);
-//   return x;
-// }
+function slow(x) {
+  alert(`Викликана з ${x}`);
+  return x;
+}
 
-// function cachingDecorator(func) {
-//   let cache = new Map();
+function cachingDecorator(func) {
+  let cache = new Map();
 
-//   console.log(cache);
+  console.log(cache);
 
-//   return function (x) {
-//     if (caches.has(x)) {
-//       cache.get(x);
-//     }
-//     let result = func(x);
-//     console.log(result);
-//     cache.set(result, x);
-//     return result;
-//   };
-// }
+  return function (x) {
+    if (caches.has(x)) {
+      cache.get(x);
+    }
+    let result = func(x);
+    console.log(result);
+    cache.set(result, x);
+    return result;
+  };
+}
 
-// slow = cachingDecorator(slow);
+slow = cachingDecorator(slow);
 
-// alert(slow(1));
-// // alert(`Again: ${slow(1)}`);
+alert(slow(1));
+// alert(`Again: ${slow(1)}`);
 
-// function getXItem(item) {
-//   alert(`Викликана з ${item}`);
-//   return item;
-// }
-// function cachingDecorator(func) {
-//   let cache = new Map();
+function getXItem(item) {
+  alert(`Викликана з ${item}`);
+  return item;
+}
+function cachingDecorator(func) {
+  let cache = new Map();
 
-//   return function (item) {
-//     if (cache.has(item)) {
-//       return cache.get(item);
-//     }
-//     let resultItem = func(item);
-//     cache.set(resultItem, item);
-//     return resultItem;
-//   };
-// }
+  return function (item) {
+    if (cache.has(item)) {
+      return cache.get(item);
+    }
+    let resultItem = func(item);
+    cache.set(resultItem, item);
+    return resultItem;
+  };
+}
 
-// getXItem = cachingDecorator(getXItem);
+getXItem = cachingDecorator(getXItem);
 
-// alert(getXItem(1));
+alert(getXItem(1));
 
-// function hello(text) {
-//   console.log(text, this.name, this.age);
-// }
+function hello(text) {
+  console.log(text, this.name, this.age);
+}
 
 // const person = {
 //   name: "Roman",
 //   age: 22,
 // };
 
-// hello.apply(person, ['Hello']);
+hello.apply(person, ['Hello']);
 
-// function hello() {
-//   console.log(`${this.name} ${this["last name"]}`);
-// }
+function hello() {
+  console.log(`${this.name} ${this["last name"]}`);
+}
 
 // const user = {
 //   ["name"]: "Roman",
@@ -517,29 +517,29 @@
 //   },
 // };
 
-// hello.call(user);
+hello.call(user);
 
-// function sayHi() {
-//   console.log(this.name);
-// }
+function sayHi() {
+  console.log(this.name);
+}
 
-// let user = { name: "Roman" };
-// let admin = { name: "Pete" };
+let user = { name: "Roman" };
+let admin = { name: "Pete" };
 
-// // sayHi.call(user);
-// // sayHi.call(admin);
+// sayHi.call(user);
+// sayHi.call(admin);
 
-// function say(phrase) {
-//   console.log(` ${phrase} ${this.name}`);
-// }
+function say(phrase) {
+  console.log(` ${phrase} ${this.name}`);
+}
 
-// say.call(user, "Hello");
-// say.call(admin, "Hi");
+say.call(user, "Hello");
+say.call(admin, "Hi");
 
-// function hash () {
-//   console.log([].join.call(arguments));
-// }
-// hash(1,2);
+function hash () {
+  console.log([].join.call(arguments));
+}
+hash(1,2);
 
 // const auto = {
 //   brand: "BMW",
@@ -557,107 +557,107 @@
 // let motorDrive = auto.drive.bind(motorBike);
 // let sheepDrive = auto.drive.bind({ brand: "Sheep" });
 
-// const h2 = document.querySelector.bind(document);
-// // console.log(h2);
+const h2 = document.querySelector.bind(document);
+// console.log(h2);
 
-// const header = h2('body');
+const header = h2('body');
 
-// console.log(header);
+console.log(header);
 
-// console.log(h2 === document.querySelector);
+console.log(h2 === document.querySelector);
 
-// const auto = {
-//   brand: "BMW",
-//   drive() {
-//     console.log(this);
-//     return `Заведем наш ${this.brand}`;
-//   },
-// };
+const auto = {
+  brand: "BMW",
+  drive() {
+    console.log(this);
+    return `Заведем наш ${this.brand}`;
+  },
+};
 
-// const motorBike = {
-//   brand: 'Suzuki',
-// }
+const motorBike = {
+  brand: 'Suzuki',
+}
 
-// const autoDrive = auto.drive.bind(auto);
-// const motorDrive = auto.drive.bind(motorBike);
+const autoDrive = auto.drive.bind(auto);
+const motorDrive = auto.drive.bind(motorBike);
 
-// function sayHi(msg) {
-//   console.log(this);
-//   console.log(msg + " " + this.name);
-// }
+function sayHi(msg) {
+  console.log(this);
+  console.log(msg + " " + this.name);
+}
 
-// const person = {
-//   name: "Roman",
-//   ["last name"]: "Chaban",
-// };
+const person = {
+  name: "Roman",
+  ["last name"]: "Chaban",
+};
 
-// const sayHello = sayHi.bind(person, "HI!");
-// sayHello();
-// sayHi.apply(person, ["Hello"]);
+const sayHello = sayHi.bind(person, "HI!");
+sayHello();
+sayHi.apply(person, ["Hello"]);
 
-// let printValue = (item) => {
-//   return item * 2;
-// };
+let printValue = (item) => {
+  return item * 2;
+};
 
-// const cachingDecorator = (func) => {
-//   let cache = new Map();
+const cachingDecorator = (func) => {
+  let cache = new Map();
 
-//   return function (item) {
-//     if (cache.has(item)) {
-//       cache.get(item);
-//     }
-//     let result = func(item);
-//     cache.set(item, result);
-//     return result;
-//   };
-// };
+  return function (item) {
+    if (cache.has(item)) {
+      cache.get(item);
+    }
+    let result = func(item);
+    cache.set(item, result);
+    return result;
+  };
+};
 
-// printValue = cachingDecorator(printValue);
+printValue = cachingDecorator(printValue);
 
-// alert(printValue(1));
+alert(printValue(1));
 
-// function printName() {
-//   console.log(this);
-//   console.log(this.firstName);
-// }
+function printName() {
+  console.log(this);
+  console.log(this.firstName);
+}
 
 // const user = {
 //   firstName: "Roman",
 //   ["last name"]: "Chaban",
 // };
 
-// printName.call(user);
+printName.call(user);
 
-// let slow = (x) => {
-//   alert(`Викликана з ${x}`);
-//   return x;
-// };
+let slow = (x) => {
+  alert(`Викликана з ${x}`);
+  return x;
+};
 
-// let slowTwo = (x) => {
-//     return x * 2;
-// }
+let slowTwo = (x) => {
+    return x * 2;
+}
 
-// const cachingDecorator = (func) => {
-//   let cache = new Map();
-//   return function (x) {
-//     if (cache.has(x)) {
-//       return cache.get(x);
-//     }
-//     let result = func(x);
+const cachingDecorator = (func) => {
+  let cache = new Map();
+  return function (x) {
+    if (cache.has(x)) {
+      return cache.get(x);
+    }
+    let result = func(x);
 
-//     cache.set(x, result);
-//     return result;
-//   };
-// };
+    cache.set(x, result);
+    return result;
+  };
+};
 
-// slow = cachingDecorator(slow);
+slow = cachingDecorator(slow);
 
-// alert(slow(1));
-// alert(`Again: ${slow(1)}`);
+alert(slow(1));
+alert(`Again: ${slow(1)}`);
 
-// slowTwo = cachingDecorator(slowTwo);
+slowTwo = cachingDecorator(slowTwo);
 
-// console.log(slowTwo(2));
+console.log(slowTwo(2));
 
 // let worker = {
 //   someMethod() {
@@ -669,26 +669,26 @@
 //   },
 // };
 
-// const cachingDecorator = (func) => {
-//   let cache = new Map();
-//   return function (x) {
-//     if (cache.has(x)) {
-//       return cache.get(x);
-//     }
-//     let result = func(x);
-//     cache.set(x, result);
-//     return result;
-//   };
-// };
+const cachingDecorator = (func) => {
+  let cache = new Map();
+  return function (x) {
+    if (cache.has(x)) {
+      return cache.get(x);
+    }
+    let result = func(x);
+    cache.set(x, result);
+    return result;
+  };
+};
 
-// // alert(worker.slow(1));
+// alert(worker.slow(1));
 
-// // worker.slow = cachingDecorator(worker.slow);
-// alert(worker.slow(2));
+// worker.slow = cachingDecorator(worker.slow);
+alert(worker.slow(2));
 
-// function sayHi(greet) {
-//   console.log(greet + " " + this.name);
-// }
+function sayHi(greet) {
+  console.log(greet + " " + this.name);
+}
 
 // let user = { name: "Ivan" };
 // let admin = { name: "Admin" };
@@ -707,22 +707,22 @@
 //   },
 // };
 
-// function cachingDecorator(func) {
-//   let cache = new Map();
-//   return function (x) {
-//     if (cache.has(x)) {
-//       return cache.get(x);
-//     }
-//     let result = func.call(this, x);
-//     cache.set(x, result);
-//     return result;
-//   };
-// }
+function cachingDecorator(func) {
+  let cache = new Map();
+  return function (x) {
+    if (cache.has(x)) {
+      return cache.get(x);
+    }
+    let result = func.call(this, x);
+    cache.set(x, result);
+    return result;
+  };
+}
 
-// worker.slow = cachingDecorator(worker.slow);
+worker.slow = cachingDecorator(worker.slow);
 
-// alert(worker.slow(2));
-// alert(worker.slow(2));
+alert(worker.slow(2));
+alert(worker.slow(2));
 
 // let worker = {
 //   slow(min, max) {
@@ -731,47 +731,47 @@
 //   },
 // };
 
-// function cachingDecorator(func, hash) {
-//   let cache = new Map();
-//   return function () {
-//     let key = hash(arguments);
-//     if (cache.has(key)) {
-//       return cache.get(key);
-//     }
-//     let result = func.apply(this, ...[arguments]); //**
-//     cache.set(key, result);
-//     return result;
-//   };
-// }
+function cachingDecorator(func, hash) {
+  let cache = new Map();
+  return function () {
+    let key = hash(arguments);
+    if (cache.has(key)) {
+      return cache.get(key);
+    }
+    let result = func.apply(this, ...[arguments]); //**
+    cache.set(key, result);
+    return result;
+  };
+}
 
-// function hash(args) {
-//   return args[0] + "," + args[1];
-// }
+function hash(args) {
+  return args[0] + "," + args[1];
+}
 
-// worker.slow = cachingDecorator(worker.slow, hash);
+worker.slow = cachingDecorator(worker.slow, hash);
 
-// alert(worker.slow(3, 5));
+alert(worker.slow(3, 5));
 
-// let wrapper = function () {
-//   return func.apply(this, arguments);
-// };
+let wrapper = function () {
+  return func.apply(this, arguments);
+};
 
-// function hash () {
-//   alert([].join.call(arguments));
-// }
-// hash(1,2);
+function hash () {
+  alert([].join.call(arguments));
+}
+hash(1,2);
 
 // let user = {
 //   firstName: "Roman",
 // };
 
-// function func(phrase) {
-//   alert(`${phrase},  ${this.firstName}!`);
-// }
+function func(phrase) {
+  alert(`${phrase},  ${this.firstName}!`);
+}
 
-// let newFunc = func.bind(user);
+let newFunc = func.bind(user);
 
-// newFunc('Hello');
+newFunc('Hello');
 
 // let user = {
 //   name: "Roman",
@@ -780,18 +780,243 @@
 //   },
 // };
 
-// let say = user.sayHelloName.bind(user);
+let say = user.sayHelloName.bind(user);
 
-// say('Hello');
-// say('Goodbye');
+say('Hello');
+say('Goodbye');
 
-// function mul(a, b) {
-//   return console.log(a * b);
-// }
+function mul(a, b) {
+  return console.log(a * b);
+}
+let dobule = mul.bind(null, 2);
+dobule(3);
+dobule(4);
+dobule(6);
+function sayHi(phrase) {
+  console.log(this);
+  console.log(`${phrase}, ${this.firstName}`);
+}
+// const user = {
+//   firstName: "Roman",
+// };
+let say = sayHi.bind(user);
+say('Hello');
 
-// let dobule = mul.bind(null, 2);
+function mul(a, b) {
+  return console.log(a * b);
+}
 
-// dobule(3);
-// dobule(4);
-// dobule(6);
+let dobule = mul.bind(null, 2);
+let triple = mul.bind(null, 3);
 
+triple(3);
+triple(4);
+triple(5);
+
+let printNumber = (number) => {
+  return number * 2;
+};
+
+const cachingDecorator = (func) => {
+  let cache = new Map();
+
+  return function (number) {
+    if (cache.has(number)) {
+      console.log(`i want to info from not cache`);
+      cache.get(number);
+    }
+    let result = func(number);
+    cache.set(result, number);
+    console.log(`i want to info from to cache`);
+    return result;
+  };
+};
+
+printNumber = cachingDecorator(printNumber);
+
+alert(printNumber(2));
+alert(printNumber(2));
+// alert(printNumber(3));
+
+let slow = (x) => {
+  alert("Called with " + x);
+  return x;
+};
+
+const cachingDecorator = (func) => {
+  let cache = new Map();
+
+  return function (x) {
+    if (cache.has(x)) {
+      return cache.get(x);
+    }
+    let result = func(x);
+    cache.set(x, result);
+    return result;
+  };
+};
+
+slow = cachingDecorator(slow);
+
+alert(slow(1));
+// alert(`Again: ${slow(1)}`);
+
+// let worker = {
+//   someMethod() {
+//     return 1;
+//   },
+//   slow(x) {
+//     alert("Called with " + x);
+//     return x * this.someMethod();
+//   },
+// };
+
+const cachingDecorator = (func) => {
+  let cache = new Map();
+  return function (x) {
+    if (cache.has(x)) {
+      return cache.get(x);
+    }
+    let result = func(x);
+    cache.set(x, result);
+    return result;
+  };
+};
+alert(worker.slow(1));
+worker.slow = cachingDecorator(worker.slow);
+alert(worker.slow(2));
+let func = worker.slow;
+func(2);
+
+function sayHi() {
+  alert(this.name);
+}
+
+// let user = { name: "Roman" };
+
+// let admin = { name: "Admin" };
+
+sayHi.call(user);
+sayHi.call(admin);
+
+let slow = (x) => {
+  // this is hard operations
+  alert(`Called with: ${x}`);
+  return x;
+};
+
+const cachingDecorator = (func) => {
+  let cache = new Map();
+  return function (x) {
+    if (cache.has(x)) {
+      return cache.get(x);
+    }
+    let result = func(x);
+    cache.set(result, x);
+    return result;
+  };
+};
+
+slow = cachingDecorator(slow);
+
+alert(slow(1));
+alert(`Again: ${slow(1)}`);
+
+// // let worker = {
+// //   someMethod() {
+// //     return 1;
+// //   },
+//   slow(x) {
+//     alert(`Called with: ${x}`);
+//     return x * this.someMethod(); // (*)
+//   },
+// };
+
+const cachingDecorator = (func) => {
+  let cache = new Map();
+  return function (x) {
+    if (cache.has(x)) {
+      return cache.get(x);
+    }
+    let result = func(x); // (**)
+    cache.set(x, result);
+    return result;
+  };
+};
+
+alert(worker.slow(1)); // the original method is work
+
+worker.slow = cachingDecorator(worker.slow); // now this is start to hash
+
+alert(worker.slow(2)); // Aw , Error: Canntor read property 'someMethod' of undefined
+
+function sayHi(phrase) {
+  console.log(`${phrase}, ${this.name}`);
+}
+
+// let user = { name: "Roman" };
+// let admin = { name: "Admin" };
+
+sayHi.call(user, "Hello"); // Hello Ivan
+sayHi.call(admin, "Hi!"); // Hi Admin
+
+function say(phrase) {
+  alert(`${this.name}: ${phrase}`);
+}
+// let user = { name: "Roman" };
+say.call(user, "Hello");
+
+// let worker = {
+//   someMethod() {
+//     return 1;
+//   },
+//   slow(x) {
+//     alert(`Called with: ${x}`);
+//     return x * this.someMethod(); // (*)
+//   },
+// };
+
+const cachingDecorator = (func) => {
+  let cache = new Map();
+  return function (x) {
+    if (cache.has(x)) {
+      return cache.get(x);
+    }
+    let result = func.call(this, x);
+    cache.set(x, result);
+    return result;
+  };
+};
+
+worker.slow = cachingDecorator(worker.slow);
+
+alert(worker.slow(2));
+
+let worker = {
+  slow(min, max) {
+    alert(`Called with ${min},${max}`);
+    return min + max;
+  },
+};
+
+const cachingDecorator = (func, hash) => {
+  let cache = new Map();
+  return function () {
+    let key = hash(arguments); // (*)
+    if (cache.has(key)) {
+      return cache.get(key);
+    }
+
+    let result = func.call(this, ...arguments); // (**)
+    cache.set(key, result);
+    return result;
+  };
+};
+
+function hash(args) {
+  return args[0] + "," + args[1];
+}
+
+worker.slow = cachingDecorator(worker.slow, hash);
+
+alert(worker.slow(3, 5));
